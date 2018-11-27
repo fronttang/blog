@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
+title: 写BUG
+subtitle: Just do IT, I can do IT.
+description: 开放、开源、知识分享
+keywords: 开放,开源,知识分享,blog,博客,IT,网络,软路由,Java,Node,Hexo,Spring
 author: FrontTang
 language: zh-Hans
 timezone:
