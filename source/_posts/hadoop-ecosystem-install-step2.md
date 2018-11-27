@@ -9,6 +9,8 @@ tags:
   - CentOS
 ---
 
+<!--more-->
+
 ### 用户：root
 
 ### 说明：
