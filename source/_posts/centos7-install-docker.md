@@ -72,7 +72,8 @@ $ sudo yum install docker-ce  #由于repo中默认只开启stable仓库，故这
 #### 8、启动并加入开机启动
 
 ```bash
-$ sudo systemctl start docker$ sudo systemctl enable docker
+$ sudo systemctl start docker
+$ sudo systemctl enable docker
 ```
 
 #### 9、验证安装是否成功(有 client 和 service 两部分表示 docker 安装启动都成功了)
