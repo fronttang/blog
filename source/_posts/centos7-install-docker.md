@@ -51,17 +51,23 @@ $ sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 $ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 ```
 
+![图片 1](1.png)
+
 #### 6、可以查看所有仓库中所有 docker 版本，并选择特定版本安装
 
 ```bash
 $ yum list docker-ce --showduplicates | sort -r
 ```
 
+![图片 2](2.png)
+
 #### 7、安装 docker
 
 ```bash
 $ sudo yum install docker-ce  #由于repo中默认只开启stable仓库，故这里安装的是最新稳定版17.12.0$ sudo yum install <FQPN> # 例如：sudo yum install docker-ce-17.12.0.ce
 ```
+
+![图片 3](3.png)
 
 #### 8、启动并加入开机启动
 
@@ -74,6 +80,8 @@ $ sudo systemctl start docker$ sudo systemctl enable docker
 ```bash
 $ docker version
 ```
+
+![图片 4](4.png)
 
 ### 二、问题
 
@@ -92,6 +100,8 @@ file /usr/bin/dockerd from install of docker-ce-17.12.0.ce-1.el7.centos.x86_64 c
 ```bash
 $ sudo yum erase docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64
 ```
+
+![图片 5](5.png)
 
 #### 3、再次安装 docker
 
