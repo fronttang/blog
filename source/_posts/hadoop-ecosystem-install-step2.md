@@ -2,7 +2,7 @@
 title: Hadoop生态系统安装 Step2：创建HADOOP用户，用户组及赋权（每台机器）
 date: 2018/11/27 13:00:00
 categories:
-  - Haddop
+  - Hadoop
   - CentOS
 tags:
   - hadoop
