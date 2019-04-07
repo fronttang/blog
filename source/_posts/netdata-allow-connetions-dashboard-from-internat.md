@@ -34,4 +34,4 @@ allow dashboard from = *
 用winbox登录ROS ,打开 ip->firewall,切换到NET页,点击新增按钮
 
 ![图片 1](1554610449677.jpg)
-![图片 1](1554610422433.jpg)
+![图片 2](1554610422433.jpg)
