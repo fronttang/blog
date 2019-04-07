@@ -30,7 +30,7 @@ allow dashboard from = *
 
 ### 二、路由器里增加端口映射
 
-以ROS数据为例：
+以ROS路由器为例：
 用winbox登录ROS ,打开 ip->firewall,切换到NET页,点击新增按钮
 
 ![图片 1](1554610449677.jpg)
