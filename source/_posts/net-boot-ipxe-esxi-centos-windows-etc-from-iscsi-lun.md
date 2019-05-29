@@ -43,7 +43,7 @@ https://github.com/antonym/netboot.xyz
 https://github.com/fronttang/netboot-tftp
 
 ### 二、编译一个带iSCSI和COMBOOT功能的ipxe
-这个参考ipxe官网及ipxe论坛的一些文章进行编译，这里选不展开介绍，在我的源码netboot-tftp中有编译好可用的ipxe文件
+这个参考ipxe官网及ipxe论坛的一些文章进行编译，这里先不展开介绍，在我的源码netboot-tftp中有编译好可用的kpxe文件
 
 ### 三、群晖NAS里配置iSCSI、DCHP、TFTP 和 WEB服务器
 先按同胞网友写的教程Part 1配置好群晖的iSCSI、DCHP、TFTP 和 WEB服务器
