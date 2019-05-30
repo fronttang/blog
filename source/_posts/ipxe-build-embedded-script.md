@@ -65,7 +65,7 @@ make bin/undionly.kpxe
 ![image 4](4.png)
 关于网络启动请参考[用 ipxe 网络启动打造无盘 ESXi 系统](https://blog.open4j.com/2019/05/29/net-boot-ipxe-esxi-centos-windows-etc-from-iscsi-lun/)
 
-### 开启其他功能
+### 三、开启其他功能
 
 编译好以后默认开启的功能有 DNS、HTTP、iSCSI、TFTP、AoE、ELF、MBOOT、PXE、bzImage、Menu、PXEXT，在上图的启动界面可以看到。
 
@@ -92,7 +92,7 @@ vi config/general.h
 现在用新生成的 undionly.kpxe 固件网络启动后是多了 HTTPS 和 COMBOOT
 ![image 5](5.png)
 
-### 添加自定义脚本
+### 四、添加自定义脚本
 
 官司方文档：http://ipxe.org/embed
 
