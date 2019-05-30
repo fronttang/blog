@@ -53,15 +53,15 @@ tags:
 
 ### 三、 下载nginx docker镜像
 
-![图片 14](14.jpg)
-![图片 15](15.jpg)
-![图片 16](16.jpg)
+![图片 14](14.png)
+![图片 15](15.png)
+![图片 16](16.png)
 
 ### 四、 创建并启动nginx容器
 
-![图片 17](17.jpg)
-![图片 18](18.jpg)
-![图片 19](19.jpg)
+![图片 17](17.png)
+![图片 18](18.png)
+![图片 19](19.png)
 
 启动参数如下
 ```
@@ -71,15 +71,15 @@ tags:
 --network bridge
 ```
 
-![图片 20](20.jpg)
-![图片 21](21.jpg)
+![图片 20](20.png)
+![图片 21](21.png)
 
 ### 五、测试nginx
 
 先测试转发群晖服务检查nginx反向代理功能是否正常
 
 在 /mnt/docker/nginx/conf.d 目录创建 default.conf 配置文件
-![图片 24](24.jpg)
+![图片 24](24.png)
 
 default.conf 内容如下
 ```
@@ -101,13 +101,13 @@ server {
 
 }
 ```
-![图片 23](23.jpg)
+![图片 23](23.png)
 
 重启nginx容器后用浏览器访问 http://ledeip:88 看是否进入到群辉的界面
 ```
 docker restart nginx
 ```
-![图片 22](22.jpg)
+![图片 22](22.png)
 
 ### 六、配置nginx虚拟主机(域名)反向代理
 
@@ -140,11 +140,11 @@ docker restart nginx
 
 在主路由中配置端口映射
 心ROS为例
-![图片 25](25.jpg)
-![图片 26](26.jpg)
+![图片 25](25.png)
+![图片 26](26.png)
 
 输入 http://dsm.open4j.com:88 就能访问到群晖NAS了
-![图片 27](27.jpg)
+![图片 27](27.png)
 
 转发LEDE服务
 在 /mnt/docker/nginx/conf.d/ 目录下添加一个配置文件 lede.conf
