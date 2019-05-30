@@ -109,7 +109,7 @@ docker restart nginx
 ```
 ![图片 22](22.jpg)
 
-### 配置nginx虚拟主机(域名)反向代理
+### 六、配置nginx虚拟主机(域名)反向代理
 
 将刚才的default.conf配置文件增加 server_name dsm.yudomain.com;
 
