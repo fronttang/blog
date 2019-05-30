@@ -13,7 +13,7 @@ tags:
 
 <!--more-->
 
-### 群晖 NAS 里安装 WebDAV server
+### 一、群晖 NAS 里安装 WebDAV server
 
 在群晖的套件中心找到 WebDAV Server 并安装
 ![image 1](1.png)
@@ -23,14 +23,14 @@ tags:
 
 这样群晖的 WebDAV Server 就配置好了
 
-### 路由器端口映射让外网可以访问 WebDAV
+### 二、路由器端口映射让外网可以访问 WebDAV
 
 如果想要让外网能够操作 NAS 的文件，则需要在主路由里配置端口映射，将刚才设置的 5005 或 5006 映射到外网
 这里以 ROS 为例将 5005 映射到外网的 15675 端口
 ![image 3](3.png)
 ![image 4](4.png)
 
-### 使用客户端工具映射 NAS 到本地磁盘
+### 三、使用客户端工具映射 NAS 到本地磁盘
 
 使用客户端口工具[NetDrive](http://www.netdrive.net/)映射 NAS 到本地
 NetDrive 支持多个网盘，例如 Google Drive ,OneDrive 等等
