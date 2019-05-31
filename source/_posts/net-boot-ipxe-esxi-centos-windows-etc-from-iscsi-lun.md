@@ -113,6 +113,7 @@ tags:
 
 将 netboot-tftp 源码上传到 ROS 的 files，然后 ip -> TFTP 开启 ROS 的 TFTP 服务
 ![image 18](18.png)
+![image 21](21.png)
 
 DHCP server 里配置 next server 和 boot file server
 ![image 19](19.png)
