@@ -113,10 +113,10 @@ tags:
 
 按照上面的教程是在内网开启了两个 DHCP 服务器，一个是主路由的，我这里是 ROS，一个是群晖的。
 这样会导致有些时候网络启动后 iPXE DHCP 获取到的结果不是想要的结果，比如 next-server 地址错误
-会导致加载不到启动脚本而进不了菜单，这里建议内网只有一个 DHCP 服务器，这样就会有 DHCP 服务干扰了
+会导致加载不到启动脚本而进不了菜单，这里建议内网只有一个 DHCP 服务器，这样就不会有 DHCP 服务干扰了
 下面介绍使用 ROS、LEDE 的 DHCP 和 TFTP 服务器
 
-#### ROS DHCP 与 TFTP 设置
+#### ROS 的 DHCP 与 TFTP 设置
 
 将 netboot-tftp 源码上传到 ROS 的 files，然后 ip -> TFTP 开启 ROS 的 TFTP 服务
 ![image 18](18.png)
