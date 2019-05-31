@@ -127,6 +127,6 @@ DHCP server 里配置 next server 和 boot file server
 
 #### LEDE 的 DHCP 与 TFTP 设置
 
-如果是使用 LEDE 的 DHCP 服务器，则将 netboot-tftp 源码上传到 lede 路由上
+如果是使用 LEDE 的 DHCP 和 TFTP 服务器，则将 netboot-tftp 源码上传到 lede 路由上
 然后在 网络 -> DHCP/DNS 下进行配置 TFTP 服务
 ![image 20](20.png)
