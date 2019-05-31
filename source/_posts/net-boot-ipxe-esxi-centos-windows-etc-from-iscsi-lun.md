@@ -122,7 +122,7 @@ tags:
 ![image 18](18.png)
 ![image 21](21.png)
 
-DHCP server 里配置 next server 和 boot file server
+DHCP server 里配置 next server 和 boot file name
 ![image 19](19.png)
 
 #### LEDE 的 DHCP 与 TFTP 设置
