@@ -1,6 +1,6 @@
 version: "3.1"
 services:
-  homepage:
+  blog:
     restart: always
     build:
       context: "."
