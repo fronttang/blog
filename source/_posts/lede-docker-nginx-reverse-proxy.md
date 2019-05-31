@@ -175,7 +175,7 @@ docker restart nginx
 
 #### 转发其他服务
 
-转发其他服务和转发 NAS 一样在 /mnt/docker/nginx/conf.d/ 目录下添加一个配置文件
+转发其他服务和转发 NAS 一样在 /mnt/docker/nginx/conf/ 目录下添加一个配置文件
 修改 server_name 和 proxy_pass 地址
 然后重启 nginx 容器
 
