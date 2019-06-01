@@ -30,7 +30,7 @@ tags:
 在解析列表里添加一条A记录
 ![image 2](2.png)
 
-### 二、在谷歌云实例里安装frps
+### 二、安装frps
 frps 就是 frp 的服务器端
 
 #### SSH进入谷歌云实例
@@ -38,7 +38,7 @@ frps 就是 frp 的服务器端
 ![image 1](1.png)
 
 #### 安装frps
-在 [官方Github版本发布地址](https://github.com/fatedier/frp/releases) 下载最新的源码包
+在 [官方Github版本发布地址](https://github.com/fatedier/frp/releases) 下载最新的程序包
 我谷歌云实例是CentOS x64系统, 所以下载的是 [frp_0.27.0_linux_amd64.tar.gz](https://github.com/fatedier/frp/releases/download/v0.27.0/frp_0.27.0_linux_amd64.tar.gz)
 
 在网页SSH执行命令
@@ -86,7 +86,7 @@ tail -n 100 -f frps.log  # 查看日志
 ![image 9](9.png)
 ![image 10](10.png)
 
-关于frp的使用 [这里](https://github.com/fatedier/frp/blob/master/README_zh.md) 有官方的中方说明
+关于frp的使用 [这里](https://github.com/fatedier/frp/blob/master/README_zh.md) 有官方的中文说明
 
 ### 三、LEDE下frp客户端配置
 
