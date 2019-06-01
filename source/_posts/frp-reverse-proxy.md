@@ -88,7 +88,7 @@ tail -n 100 -f frps.log  # 查看日志
 
 关于frp的使用 [这里](https://github.com/fatedier/frp/blob/master/README_zh.md) 有官方的中文说明
 
-### 三、LEDE下frp客户端配置
+### 三、配置frpc
 
 #### 安装frp客户端插件
 ![image 7](7.png)
