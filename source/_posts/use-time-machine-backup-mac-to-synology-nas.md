@@ -16,12 +16,12 @@ tags:
 原文地址：http://www.cdaten.com/news/html/?778.html
 
 ![image 1](1.png)
-## 总览
+### 总览
 本文将引导您使用 Apple Time Machine Mac OS X 10.5 和更高版本随附的备份实用程序），将数据从 Mac OS X 计算机备份至 Synology DiskStation。
 
-## 1.设置 DiskStation 以支持 Time Machine
+### 1.设置 DiskStation 以支持 Time Machine
 将 DiskStation 设置为 Time Machine 的目的地之前，您需要先登录 DSM 并更改部分设置。
-### 1.1 为 Time Machine 备份创建共享文件夹
+#### 1.1 为 Time Machine 备份创建共享文件夹
 1. 使用属于 administrators 群组的帐户登录 DSM。
 2. 前往控制面板 > 共享文件夹，然后单击创建以创建共享文件夹。
 ![image 2](2.png)
@@ -38,7 +38,7 @@ tags:
 8. 您现在应看到新创建的共享文件夹。
 ![image 8](8.png)
 
-### 1.2 为 Time Machine 创建用户并设置配额限制
+#### 1.2 为 Time Machine 创建用户并设置配额限制
 1. 前往控制面板 > 用户，然后单击创建。
 ![image 9](9.png)
 2. 输入用户名（如“Time Machine User”）并指定密码。然后单击下一步。
@@ -63,7 +63,7 @@ tags:
 9. 现在我们应有一个名为 Time Machine User 的用户。
 ![image 17](17.png)
 
-### 1.3 将共享文件夹设置为 Time Machine 的备份目的地
+#### 1.3 将共享文件夹设置为 Time Machine 的备份目的地
 1. 前往控制面板 > 文件服务。
 ![image 18](18.png)
 2. 在 SMB/AFP/NFS 选项卡上找到 AFP 部分，然后选中启用 AFP 服务框。
@@ -80,10 +80,10 @@ Time Machine 同时支持 SMB 和 AFP。对于 macOS Sierra 和更高版本，Ti
 
 注：如果您在步骤 1.3.2 中选择使用 SMB，则改为选中启用通过 SMB 进行 Bonjour Time Machine 播送框。选择您刚创建的共享文件夹，然后单击应用。然后，在弹出窗口中单击是以确认并保存您的设置。
 
-## 2.执行 Time Machine 备份至 DiskStation
+### 2.执行 Time Machine 备份至 DiskStation
 本节将介绍如何配置 Time Machine，使其将 DiskStation 的共享文件夹设置为备份目的地。此过程可让 Time Machine 在局域网上轻易地找到您的 DiskStation，并将其视为备份硬盘。设置完成后，Time Machine 就能够开始将数据备份到 DiskStation。
 
-### 2.1 连接到您的 NAS 服务器
+#### 2.1 连接到您的 NAS 服务器
 1. 在 Mac 上，单击顶部菜单栏中的前往，然后选择连接到服务器。
 ![image 22](22.png)
 2. 输入 NAS 服务器的地址。根据步骤 1.3.2 中的设置使用 AFP 或 SMB。指定地址之后，单击连接。
@@ -93,7 +93,7 @@ Time Machine 同时支持 SMB 和 AFP。对于 macOS Sierra 和更高版本，Ti
 4. 从列表中选择 Time Machine Folder，然后单击确定。
 ![image 25](25.png)
 
-### 2.2 配置 Time Machine 以将 DiskStation 设置为其备份硬盘
+#### 2.2 配置 Time Machine 以将 DiskStation 设置为其备份硬盘
 1. 在 Mac 上，从 Dock 打开系统偏好设置，然后单击 Time Machine。
 2. 选中自动备份框，然后单击选择硬盘。
 ![image 26](26.png)
