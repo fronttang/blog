@@ -148,7 +148,7 @@ chain --autofree tftp://${next-server}/boot.ipxe
 网络启动后就能进入自己的菜单了
 ![image 9](9.png)
 
-#### 开启debug模式
+### 五、开启debug模式
 
 有时候会遇到一些奇葩问题不知道如何解决，这时候可以开启debug模式，这里以开启iSCSI的debug为例
 
