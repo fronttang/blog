@@ -71,6 +71,8 @@ tags:
 
 #### 网络启动测试
 
+在BIOS的BOOT选项里将从网络启动调整到第一位,各主板BIOS操作不一样,请自行查阅主板BIOS说明
+![image 48](48.png)
 ![image 6](6.png)
 ![image 7](7.png)
 
