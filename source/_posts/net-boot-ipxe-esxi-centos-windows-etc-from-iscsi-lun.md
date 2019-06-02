@@ -170,7 +170,7 @@ chain --replace --autofree ${menu-url}
 ```
 
 ### 十、折腾过程中遇到的坑
-#### 关于iscsi 的 sanuri 坑
+#### 关于iscsi 的坑
 仔细看 netboot-tftp 里菜单命令会发现有一条命令 sanhook ${root-path}
 是扫描加载 iSCSI的
 全路径是这样的
