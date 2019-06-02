@@ -150,7 +150,7 @@ chain --autofree tftp://${next-server}/boot.ipxe
 
 #### 开启debug模式
 
-有时候会遇到一些奇葩问题不知道如果解决，这时候可以开启debug模式，这里以开启iSCSI的debug为例
+有时候会遇到一些奇葩问题不知道如何解决，这时候可以开启debug模式，这里以开启iSCSI的debug为例
 
 在编译的时候增加 DEBUG=iscsi 参数
 ```
