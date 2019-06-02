@@ -147,7 +147,6 @@ chain --autofree tftp://${next-server}/boot.ipxe
 
 网络启动后就能进入自己的菜单了
 ![image 9](9.png)
-![image 10](10.png)
 
 #### 开启debug模式
 
