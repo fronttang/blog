@@ -149,7 +149,7 @@ DHCP server 里配置 next server 和 boot file name
 这样脚本会找 mac地址.系统名 的iSCSI, 这样就会取不到iSCSI, 除非你iSCSI target用 mac地址.系统名 命名
 
 在 netboot-tftp 源码目录下有一个boot文件夹，这个文件夹就是放置对应主机或MAC地址特殊脚本的目录
-在boot目录下创建文件, 文件的命名格式为 mac-mac地址去掉冒号字每小写.ipxe
+在boot目录下创建文件, 文件的命名格式为 mac-mac地址去掉冒号字母小写.ipxe
 例如 mac-001234567890.ipxe
 在文件里添加脚本如下：
 ```
