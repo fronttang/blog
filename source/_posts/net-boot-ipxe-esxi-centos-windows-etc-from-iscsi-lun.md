@@ -168,3 +168,45 @@ set menu-timeout 10000
 
 chain --replace --autofree ${menu-url}
 ```
+
+### 十、折腾过程中遇到的坑
+#### 关于iscsi 的 sanuri 坑
+仔细看 netboot-tftp 里菜单命令会发现有一条命令 sanhook ${root-path}
+是扫描加载 iSCSI的
+全路径是这样的
+sanhook iscsi:192.168.1.252::::iqn.iqn.2000-01.com.synology:mini.ESXi
+
+[iPXE官方文档](http://ipxe.org/sanuri)有对这个进行说明:
+![image 44](44.png)
+
+```
+iscsi:<servername>:<protocol>:<port>:<LUN>:<targetname>
+```
+
+我们把其中的 protocol、prot、LUN 都省略了，所以成了::::
+其中LUN是一个坑，官方文档中有对LUN的介绍是这个样的
+```
+<LUN> is the SCSI LUN of the boot disk, in hexadecimal. It can be left empty, in which case the default LUN (0) will be used.
+```
+LUN 是指要加载 iSCSI target 中哪个LUN，值是LUN的编号 ,关键信息是 默认值 为 0。
+使用我的脚本加载 DS3617xs 中的 iSCSI 一切正常
+但是用这个脚本加载DS918+ 的中 iSCSI 就会加载不到
+研究了几个小才发现
+在我在 DS3617xs 中 iSCSI target 第一个LUN 的编号为 0
+![image 45](45.png)
+
+而DS918+ 中 iSCSI target 第一个LUN 的编号为 1
+![image 46](46.png)
+
+所以如果发现自己 iSCSI target 第一个LUN 的编号为 1 的，请修改 netboot-tftp 源码中的 boot.ipxe.cfg 文件
+
+![image 47](47.png)
+
+将
+```
+set base-iscsi iscsi:${iscsi-server}::::${base-iqn}
+```
+改成
+```
+set base-iscsi iscsi:${iscsi-server}:::1:${base-iqn}
+```
