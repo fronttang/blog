@@ -147,3 +147,16 @@ chain --autofree tftp://${next-server}/boot.ipxe
 
 网络启动后就能进入自己的菜单了
 ![image 9](9.png)
+![image 10](10.png)
+
+#### 开启debug模式
+
+有时候会遇到一些奇葩问题不知道如果解决，这时候可以开启debug模式，这里以开启iSCSI的debug为例
+
+在编译的时候增加 DEBUG=iscsi 参数
+```
+make bin/undionly.kpxe EMBED=script.ipxe DEBUG=iscsi
+```
+
+编译后用新固件引导启动，在sanhook iscsi命令的时候就会出现debug日志信息
+![image 11](11.png)

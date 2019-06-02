@@ -102,7 +102,9 @@ tags:
 ![image 22](22.png)
 
 这里安装的时候硬盘选择界面会出现 iSCSI 的硬盘，如果有其他硬盘的话别选错了
-如果没有出现 iSCSI 硬盘，那肯定是加载出错了。（图片下次补上）
+如果没有出现 iSCSI 硬盘，那肯定是加载出错了。
+![image 28](28.png)
+![image 29](29.png)
 
 ### 七、安装完成启动系统
 
@@ -130,3 +132,39 @@ DHCP server 里配置 next server 和 boot file name
 如果是使用 LEDE 的 DHCP 和 TFTP 服务器，则将 netboot-tftp 源码上传到 lede 路由上
 然后在 网络 -> DHCP/DNS 下进行配置 TFTP 服务
 ![image 20](20.png)
+
+### 九、对特殊电脑做特别设置
+
+脚本是支持多个电脑启动不同的系统到电脑对应系统的iSCSI LUN
+这就是上面创建 iSCSI target的时候target名称为什么要用 主机名.系统名
+![image 10](10.png)
+
+\* 设置电脑网卡mac地址脚本
+比如要让电脑A(网卡MAC地址为 00:12:34:56:78:90) 启动到 mini.系统名 的iSCSI
+那就是设置电脑A的主机名为 mini
+如果使用群晖的DHCP，则可以在群群晖DHCP客户端列表里给MAC地址设置主机名
+![image 4](4.png)
+
+如果一些不能设置主机名的DHCP服务器，如ROS，如果不用做特殊设置，则hostname 为空
+这样脚本会找 mac地址.系统名 的iSCSI, 这样就会取不到iSCSI, 除非你iSCSI target用 mac地址.系统名 命名
+
+在 netboot-tftp 源码目录下有一个boot文件夹，这个文件夹就是放置对应主机或MAC地址特殊脚本的目录
+在boot目录下创建文件, 文件的命名格式为 mac-mac地址去掉冒号字每小写.ipxe
+例如 mac-001234567890.ipxe
+在文件里添加脚本如下：
+```
+#!ipxe
+echo
+# 设置这个mac地址的主机名
+set hostname mini
+set initiator-iqn ${base-iqn}:${hostname}
+echo Booting ${hostname}
+
+# 这里还可以设置默认进入的菜单和在菜单上的等待时间
+# 比如装好系统后设置 default 为 esxi ,timeout 为1秒或更短
+# 这样就可以直接进入esxi系统，省去选择菜单步骤。在装好系统不要用菜单的时候很有用
+set menu-default esxi
+set menu-timeout 10000
+
+chain --replace --autofree ${menu-url}
+```
