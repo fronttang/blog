@@ -49,6 +49,7 @@ reboot
 ![image 8](8.png)
 
 如果显示依赖错误，请先升级更老的build版本,比如U1等等
+参考：https://communities.vmware.com/message/2810545
 
 3. 重启完关闭维护模式并开启虚拟机
 ![image 9](9.png)
