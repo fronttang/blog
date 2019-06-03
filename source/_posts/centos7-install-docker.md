@@ -2,7 +2,6 @@
 title: Centos7上安装docker
 date: 2018-12-17 15:17:14
 categories:
-  - docker
   - CentOS
 tags:
   - CentOS

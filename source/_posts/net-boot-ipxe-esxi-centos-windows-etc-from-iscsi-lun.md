@@ -2,12 +2,9 @@
 title: 用ipxe网络启动打造无盘ESXi系统
 date: 2019-05-29 22:35:09
 categories:
-  - IPXE
-  - ESXi
-  - CentOS
-  - iSCSI
+  - iPXE
 tags:
-  - IPXE
+  - iPXE
   - NETBOOT
   - ESXi
   - iSCSI
@@ -71,7 +68,7 @@ tags:
 
 #### 网络启动测试
 
-在BIOS的BOOT选项里将从网络启动调整到第一位,各主板BIOS操作不一样,请自行查阅主板BIOS说明
+在 BIOS 的 BOOT 选项里将从网络启动调整到第一位,各主板 BIOS 操作不一样,请自行查阅主板 BIOS 说明
 ![image 48](48.png)
 ![image 6](6.png)
 ![image 7](7.png)
@@ -137,23 +134,24 @@ DHCP server 里配置 next server 和 boot file name
 
 ### 九、对特殊电脑做特别设置
 
-脚本是支持多个电脑启动不同的系统到电脑对应系统的iSCSI LUN
-这就是上面创建 iSCSI target的时候target名称为什么要用 主机名.系统名
+脚本是支持多个电脑启动不同的系统到电脑对应系统的 iSCSI LUN
+这就是上面创建 iSCSI target 的时候 target 名称为什么要用 主机名.系统名
 ![image 10](10.png)
 
-\* 设置电脑网卡mac地址脚本
-比如要让电脑A(网卡MAC地址为 00:12:34:56:78:90) 启动到 mini.系统名 的iSCSI
-那就是设置电脑A的主机名为 mini
-如果使用群晖的DHCP，则可以在群群晖DHCP客户端列表里给MAC地址设置主机名
+\* 设置电脑网卡 mac 地址脚本
+比如要让电脑 A(网卡 MAC 地址为 00:12:34:56:78:90) 启动到 mini.系统名 的 iSCSI
+那就是设置电脑 A 的主机名为 mini
+如果使用群晖的 DHCP，则可以在群群晖 DHCP 客户端列表里给 MAC 地址设置主机名
 ![image 4](4.png)
 
-如果一些不能设置主机名的DHCP服务器，如ROS，如果不用做特殊设置，则hostname 为空
-这样脚本会找 mac地址.系统名 的iSCSI, 这样就会取不到iSCSI, 除非你iSCSI target用 mac地址.系统名 命名
+如果一些不能设置主机名的 DHCP 服务器，如 ROS，如果不用做特殊设置，则 hostname 为空
+这样脚本会找 mac 地址.系统名 的 iSCSI, 这样就会取不到 iSCSI, 除非你 iSCSI target 用 mac 地址.系统名 命名
 
-在 netboot-tftp 源码目录下有一个boot文件夹，这个文件夹就是放置对应主机或MAC地址特殊脚本的目录
-在boot目录下创建文件, 文件的命名格式为 mac-mac地址去掉冒号字母小写.ipxe
+在 netboot-tftp 源码目录下有一个 boot 文件夹，这个文件夹就是放置对应主机或 MAC 地址特殊脚本的目录
+在 boot 目录下创建文件, 文件的命名格式为 mac-mac 地址去掉冒号字母小写.ipxe
 例如 mac-001234567890.ipxe
 在文件里添加脚本如下：
+
 ```
 #!ipxe
 echo
@@ -172,13 +170,15 @@ chain --replace --autofree ${menu-url}
 ```
 
 ### 十、折腾过程中遇到的坑
-#### 关于iscsi 的坑
-仔细看 netboot-tftp 里菜单命令会发现有一条命令 sanhook ${root-path}
-是扫描加载 iSCSI的
+
+#### 关于 iscsi 的坑
+
+仔细看 netboot-tftp 里菜单命令会发现有一条命令 sanhook \${root-path}
+是扫描加载 iSCSI 的
 全路径是这样的
 sanhook iscsi:192.168.1.252::::iqn.iqn.2000-01.com.synology:mini.ESXi
 
-[iPXE官方文档](http://ipxe.org/sanuri)有对这个进行说明:
+[iPXE 官方文档](http://ipxe.org/sanuri)有对这个进行说明:
 ![image 44](44.png)
 
 ```
@@ -186,29 +186,34 @@ iscsi:<servername>:<protocol>:<port>:<LUN>:<targetname>
 ```
 
 我们把其中的 protocol、prot、LUN 都省略了，所以成了::::
-其中LUN是一个坑，官方文档中有对LUN的介绍是这个样的
+其中 LUN 是一个坑，官方文档中有对 LUN 的介绍是这个样的
+
 ```
 <LUN> is the SCSI LUN of the boot disk, in hexadecimal. It can be left empty, in which case the default LUN (0) will be used.
 ```
-LUN 是指要加载 iSCSI target 中哪个LUN，值是LUN的编号 ,关键信息是 默认值 为 0。
+
+LUN 是指要加载 iSCSI target 中哪个 LUN，值是 LUN 的编号 ,关键信息是 默认值 为 0。
 使用我的脚本加载 DS3617xs 中的 iSCSI 一切正常
-但是用这个脚本加载DS918+ 的中 iSCSI 就会加载不到
+但是用这个脚本加载 DS918+ 的中 iSCSI 就会加载不到
 研究了几个小才发现
-在我在 DS3617xs 中 iSCSI target 第一个LUN 的编号为 0
+在我在 DS3617xs 中 iSCSI target 第一个 LUN 的编号为 0
 ![image 45](45.png)
 
-而DS918+ 中 iSCSI target 第一个LUN 的编号为 1
+而 DS918+ 中 iSCSI target 第一个 LUN 的编号为 1
 ![image 46](46.png)
 
-所以如果发现自己 iSCSI target 第一个LUN 的编号为 1 的，请修改 netboot-tftp 源码中的 boot.ipxe.cfg 文件
+所以如果发现自己 iSCSI target 第一个 LUN 的编号为 1 的，请修改 netboot-tftp 源码中的 boot.ipxe.cfg 文件
 
 ![image 47](47.png)
 
 将
+
 ```
 set base-iscsi iscsi:${iscsi-server}::::${base-iqn}
 ```
+
 改成
+
 ```
 set base-iscsi iscsi:${iscsi-server}:::1:${base-iqn}
 ```

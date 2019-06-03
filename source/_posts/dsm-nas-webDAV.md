@@ -2,12 +2,10 @@
 title: 开启群晖NAS的WebDAV服务，让文件操作变得更简单
 date: 2019-05-30 16:00:35
 categories:
-  - dsm
-  - ros
-  - WebDAV
+  - DSM
 tags:
-  - dsm
-  - ros
+  - DSM
+  - ROS
   - WebDAV
 ---
 

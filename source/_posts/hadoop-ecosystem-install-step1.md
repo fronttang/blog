@@ -3,9 +3,8 @@ title: Hadoop生态系统安装 Step1：修改主机名，配置HOSTS（每台�
 date: 2018/11/27 13:00:00
 categories:
   - Hadoop
-  - CentOS
 tags:
-  - hadoop
+  - Hadoop
   - CentOS
   - hosts
 ---

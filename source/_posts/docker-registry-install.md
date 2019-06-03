@@ -3,7 +3,6 @@ title: 教你分分钟搞定Docker私有仓库Registry
 date: 2018-12-21 14:18:04
 categories:
   - docker
-  - CentOS
 tags:
   - CentOS
   - docker

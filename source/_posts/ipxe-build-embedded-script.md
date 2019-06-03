@@ -2,14 +2,11 @@
 title: iPXE编译增加功能与自定义脚本
 date: 2019-05-30 10:36:48
 categories:
-  - IPXE
-  - CentOS
-  - iSCSI
+  - iPXE
 tags:
-  - IPXE
+  - iPXE
   - NETBOOT
   - iSCSI
-  - NETBOOT
 ---
 
 <!--more-->
@@ -148,14 +145,15 @@ chain --autofree tftp://${next-server}/boot.ipxe
 网络启动后就能进入自己的菜单了
 ![image 9](9.png)
 
-### 五、开启debug模式
+### 五、开启 debug 模式
 
-有时候会遇到一些奇葩问题不知道如何解决，这时候可以开启debug模式，这里以开启iSCSI的debug为例
+有时候会遇到一些奇葩问题不知道如何解决，这时候可以开启 debug 模式，这里以开启 iSCSI 的 debug 为例
 
 在编译的时候增加 DEBUG=iscsi 参数
+
 ```
 make bin/undionly.kpxe EMBED=script.ipxe DEBUG=iscsi
 ```
 
-编译后用新固件引导启动，在sanhook iscsi命令的时候就会出现debug日志信息
+编译后用新固件引导启动，在 sanhook iscsi 命令的时候就会出现 debug 日志信息
 ![image 11](11.png)

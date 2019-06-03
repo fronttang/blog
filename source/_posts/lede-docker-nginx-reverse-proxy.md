@@ -2,17 +2,13 @@
 title: OpenWRT/LEDE软路由下利用docker安装nginx实现反向代理
 date: 2019-04-07 15:35:55
 categories:
-  - lede
-  - dsm
-  - nginx
-  - openwrt
-  - docker
+  - LEDE
 tags:
-  - lede
-  - dsm
+  - LEDE
+  - DSM
   - nginx
-  - openwrt
-  - ros
+  - Openwrt
+  - ROS
   - docker
   - ajenti
   - proxy
