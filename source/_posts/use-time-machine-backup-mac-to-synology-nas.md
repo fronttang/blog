@@ -2,7 +2,7 @@
 title: 使用 Time Machine 将文件从 Mac 备份至 Synology NAS
 date: 2019-06-01 20:20:41
 categories:
-  - DMS
+  - DSM
 tags:
   - NAS
   - MacOS

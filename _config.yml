@@ -57,6 +57,8 @@ index_generator:
 default_category: uncategorized
 category_map:
 tag_map:
+sitemap:
+  path: sitemap.xml
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
