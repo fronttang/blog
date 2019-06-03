@@ -343,7 +343,7 @@ mathjax:
 han: false
 
 # Swiftype Search API Key
-# swiftype_key: ts5yzxasR18bwiz5poqS
+swiftype_key: ts5yzxasR18bwiz5poqS
 
 # Baidu Analytics ID
 #baidu_analytics:
