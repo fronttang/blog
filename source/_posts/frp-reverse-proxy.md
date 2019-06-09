@@ -119,7 +119,7 @@ tail -n 100 -f frps.log  # 查看日志
 
 ### 四、穿透https服务
 
-如果要穿透https服务则有为https服务设置证书，先按 [申请 Let's Encrypt 免费 SSL 证书](https://blog.open4j.com/2019/06/09/apply-lets-encrypt-free-ssl/) 文章申请域名SSL证书
+如果要穿透https服务则要为https服务设置证书，先按 [申请 Let's Encrypt 免费 SSL 证书](https://blog.open4j.com/2019/06/09/apply-lets-encrypt-free-ssl/) 文章申请域名SSL证书
 
 下面以配置lede https服务为例
 将下载来的证书文件上传到 lede 的 /etc/ssl 目录下，目录可以随意，我这里上传到lede的 /etc/ssl/open4j 目录
@@ -142,4 +142,4 @@ service uhttpd restart
 ![image 15](15.png)
 ![image 15](15.png)
 
-在用https访问 esxi、群晖，只有配置好证书就可以了，具体配置方法这里不一一介绍了，善用搜索引擎。
+用https访问 esxi、群晖，只有配置好证书就可以了，具体配置方法这里不一一介绍了，善用搜索引擎。
