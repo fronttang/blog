@@ -140,6 +140,6 @@ service uhttpd restart
 
 最后修改lede frpc插件配置
 ![image 15](15.png)
-![image 15](15.png)
+![image 16](16.png)
 
 用https访问 esxi、群晖，只有配置好证书就可以了，具体配置方法这里不一一介绍了，善用搜索引擎。
