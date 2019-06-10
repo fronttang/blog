@@ -2,7 +2,7 @@
 title: OpenWRT/LEDE软路由下利用docker安装nginx实现反向代理
 date: 2019-04-07 15:35:55
 categories:
-  - LEDE
+  - Router
 tags:
   - LEDE
   - DSM

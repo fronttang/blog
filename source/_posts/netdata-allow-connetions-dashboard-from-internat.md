@@ -2,7 +2,7 @@
 title: 允许netdata外网访问
 date: 2019-04-07 11:45:56
 categories:
-  - netdata
+  - Router
 tags:
   - netdata
   - Openwrt

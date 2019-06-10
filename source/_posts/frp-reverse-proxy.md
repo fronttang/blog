@@ -2,7 +2,7 @@
 title: LEDE路由下frp内网穿透教程
 date: 2019-06-01 14:12:52
 categories:
-  - LEDE
+  - Router
 tags:
   - LEDE
   - DSM
@@ -116,14 +116,14 @@ tail -n 100 -f frps.log  # 查看日志
 进管理台可以看到一条 http 的记录
 ![image 14](14.png)
 
+### 四、穿透 https 服务
 
-### 四、穿透https服务
+如果要穿透 https 服务则要为 https 服务设置证书，先按 [申请 Let's Encrypt 免费 SSL 证书](https://blog.open4j.com/2019/06/09/apply-lets-encrypt-free-ssl/) 文章申请域名 SSL 证书
 
-如果要穿透https服务则要为https服务设置证书，先按 [申请 Let's Encrypt 免费 SSL 证书](https://blog.open4j.com/2019/06/09/apply-lets-encrypt-free-ssl/) 文章申请域名SSL证书
+下面以配置 lede https 服务为例
+将下载来的证书文件上传到 lede 的 /etc/ssl 目录下，目录可以随意，我这里上传到 lede 的 /etc/ssl/open4j 目录
+然后 SSH 进到 lede 修改 /etc/config/uhttpd 配置文件
 
-下面以配置lede https服务为例
-将下载来的证书文件上传到 lede 的 /etc/ssl 目录下，目录可以随意，我这里上传到lede的 /etc/ssl/open4j 目录
-然后SSH进到lede修改 /etc/config/uhttpd 配置文件
 ```
 vi /etc/config/uhttpd
 
@@ -138,8 +138,8 @@ option key '/etc/ssl/open4j/private.key'
 service uhttpd restart
 ```
 
-最后修改lede frpc插件配置
+最后修改 lede frpc 插件配置
 ![image 15](15.png)
 ![image 16](16.png)
 
-用https访问 esxi、群晖，只有配置好证书就可以了，具体配置方法这里不一一介绍了，善用搜索引擎。
+用 https 访问 esxi、群晖，只有配置好证书就可以了，具体配置方法这里不一一介绍了，善用搜索引擎。
