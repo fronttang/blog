@@ -62,5 +62,14 @@ https://downloads.openwrt.org/releases/18.06.2/packages/x86_64/base/
 
 #### 其他一些配置
 
-這個看圖吧，國內的 DNS 交給 SmartDNS,國外默認。
+國內的 DNS 交給 SmartDNS,國外默認。
 ![图片 6](6.png)
+
+#### 检测转发服务是否配置成功
+
+使用 nslookup -querytype=ptr 0.0.0.0 查询域名
+看命令结果中的 name 项目是否显示为 smartdns 或主机名，如 smartdns 则表示生效
+
+![图片 7](7.png)
+
+其他使用方法請參考官網
