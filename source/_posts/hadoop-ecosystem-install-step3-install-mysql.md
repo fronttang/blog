@@ -1,6 +1,6 @@
 ---
 title: Hadoop生态系统安装 Step3：安装JDK（每台机器）
-date: 2019-06-28 10:19:14
+date: 2018-11-29 13:02:00
 categories:
   - Hadoop
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Hadoop生态系统安装 Step9：安装kafka
-date: 2019-06-28 16:09:26
+date: 2018-12-06 13:01:00
 categories:
   - Hadoop
 tags:

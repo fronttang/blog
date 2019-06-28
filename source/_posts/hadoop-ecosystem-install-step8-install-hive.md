@@ -1,6 +1,6 @@
 ---
 title: Hadoop生态系统安装 Step8：安装Hive
-date: 2019-06-28 11:26:58
+date: 2018-12-05 13:01:00
 categories:
   - Hadoop
 tags:

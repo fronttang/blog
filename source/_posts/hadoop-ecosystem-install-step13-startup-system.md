@@ -1,6 +1,6 @@
 ---
 title: Hadoop生态系统安装 Step13：集群启动
-date: 2019-06-28 16:33:50
+date: 2018-12-10 13:01:00
 categories:
   - Hadoop
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Hadoop生态系统安装 Step6：安装HADOOP
-date: 2019-06-28 10:48:37
+date: 2018-12-03 13:01:00
 categories:
   - Hadoop
 tags:

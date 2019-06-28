@@ -1,6 +1,6 @@
 ---
 title: Hadoop生态系统安装 Step2：创建HADOOP用户，用户组及赋权（每台机器）
-date: 2018/11/27 13:00:00
+date: 2018-11-28 13:01:00
 categories:
   - Hadoop
 tags:
