@@ -9,6 +9,8 @@ tags:
   - JDK
 ---
 
+<!--more-->
+
 ### 用戶：root
 
 ### 安裝包：jdk-8u121-linux-x64.rpm
