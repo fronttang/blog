@@ -56,7 +56,11 @@ azkaban-sql-script-2.5.0.tar.gz
 
    ```
    tar –xzvf azkaban-web-server-2.5.0.tar.gz
+   ```
+
    #修改 ./conf/azkaban.properties 如下项
+
+   ```
    azkaban.name=Azkaban
    default.timezone.id=Asia/Shanghai
    mysql.host=hadoop-slave-001
