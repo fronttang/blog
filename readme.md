@@ -6,4 +6,5 @@ cd blog
 npm install
 hexo server
 hexo generate
+hexo clean && hexo deploy
 ```

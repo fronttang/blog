@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://blog.open4j.com
+url: https://fronttang.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -81,7 +81,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/fronttang/fronttang.github.io.git
+  repo: git@github.com:fronttang/fronttang.github.io.git
   branch: master
 
 plugin:
